@@ -54,6 +54,7 @@ coinSelect.addEventListener("input", ()=>{
 
   amount.value = ""
   coinSelect.value = ""
+  btn.setAttribute("disabled", true)
   })
 })
   
