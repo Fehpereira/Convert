@@ -1,11 +1,12 @@
 let btn = document.getElementById("btn-convert")
 let coinSelect = document.getElementById("coin")
+let res = document.getElementById("res")
 
 coinSelect.addEventListener("input", ()=>{
 
   let amount = document.getElementById("amount");
 
-  if(amount.value >= 1 && coinSelect.value == "USD" || coinSelect.value == "BRL" || coinSelect.value == "EUR") {
+  if(amount.value >= 1 && (coinSelect.value == "USD" || coinSelect.value == "BRL" || coinSelect.value == "EUR")) {
     btn.removeAttribute("disabled", true)
   }
 
@@ -14,8 +15,6 @@ coinSelect.addEventListener("input", ()=>{
   event.preventDefault()
 
   if(coinSelect.value == "USD"){
-
-    const res = document.getElementById("res")
     res.classList.add("res")
     res.innerHTML = 
     `
@@ -25,8 +24,6 @@ coinSelect.addEventListener("input", ()=>{
   }
 
   else if(coinSelect.value == "BRL"){
-
-    const res = document.getElementById("res")
     res.classList.add("res")
     res.innerHTML = 
     `
@@ -36,8 +33,6 @@ coinSelect.addEventListener("input", ()=>{
   }
 
   else if(coinSelect.value == "EUR"){
-
-    const res = document.getElementById("res")
     res.classList.add("res")
     res.innerHTML = 
     `
