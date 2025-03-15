@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Convert</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <div id="logo">
+    <img src="assets/logo.svg" alt="">
+  </div>
+
+  <div class="convert-container" id="border-none">
+    <form action="">
+
+      <div class="input-wrapper">
+
+        <div class="amount-container">
+          <label for="amount">VALOR</label>
+          <input type="number" placeholder="0,00" id="amount">
+        </div>
+
+        <div class="coin">
+          <label for="coin">MOEDA</label>
+          <select name="coin" id="coin">
+              <option value="" disabled selected id="option1">Selecione uma moeda</option>
+              <option value="USD" id="usd">USD</option>
+              <option value="BRL" id="brl">BRL</option>
+              <option value="EUR" id="eur">EUR</option>
+          </select>
+        </div>
+
+      </div>
+
+      <button id="btn-convert" disabled>Converter</button>
+
+    </form>
+  </div>
+
+  <div id="res">
+  </div>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
